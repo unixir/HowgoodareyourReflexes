@@ -36,7 +36,8 @@ public class MainGame extends AppCompatActivity {
     //CustomChronometer chronometer;
     Thread thread;
     Context context;
-    //final Intent intent=new Intent(this, GameOverActivity.class);
+    static Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +61,7 @@ public class MainGame extends AppCompatActivity {
         progressBar.setMax(2000);
         progressBar.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
         progressBar.setProgress(p);
+        intent=new Intent(this, Game_over.class);
 
 
         thread=new Thread(new Runnable() {
@@ -85,8 +87,8 @@ public class MainGame extends AppCompatActivity {
                         if(p==2000) done=true;
                     }
                     Log.d(TAG,"out of while loop");
-                    //intent.putExtra("score",score);
-                    //startActivity(intent);
+                    intent.putExtra("score",score);
+                    startActivity(intent);
                 }
                 catch (Exception e) {
                     e.printStackTrace();
