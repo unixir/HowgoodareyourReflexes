@@ -34,7 +34,7 @@ public class MainGame extends AppCompatActivity {
     static boolean done=false, isCorrect;
     Handler myHandler;
     //CustomChronometer chronometer;
-    Thread thread;;
+    Thread thread;
     Context context;
     //final Intent intent=new Intent(this, GameOverActivity.class);
     @Override
@@ -75,10 +75,8 @@ public class MainGame extends AppCompatActivity {
                         myHandler.post(new Runnable() {
                             @Override
                             public void run() {
-                                if(p>0 && p<700)
-                                    progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
-                                else
-                                    if(p>700 && p<1500) progressBar.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
+                                if(p>0 && p<700) progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+                                else if(p>700 && p<1500) progressBar.setProgressTintList(ColorStateList.valueOf(Color.BLUE));
                                 else if(p>1500) progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
                                 progressBar.setProgress(p);
                             }
@@ -177,7 +175,7 @@ public class MainGame extends AppCompatActivity {
 
     public int RandomNumForColor()
     {
-        int rNo=pColorID;
+        int rNo;
 
         do {
             rNo=random.nextInt(colors.length);

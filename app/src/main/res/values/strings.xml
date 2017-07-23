@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">How good are your Reflexes?</string>
+    <string name="ButtonTryAgain">Try Again</string>
+    <string name="your_score">Your Score:</string>
+    <string name="butstart">Start</string>
+    <string name="GameHeader">How good are your Reflexes?</string>
 </resources>
