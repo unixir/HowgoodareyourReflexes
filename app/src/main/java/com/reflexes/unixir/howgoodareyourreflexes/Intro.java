@@ -21,5 +21,6 @@ public class Intro extends AppCompatActivity {
         Intent intent=new Intent(this,MainGame.class);
         Log.d(TAG,"on Startgame");
         startActivity(intent);
+        //finish();
     }
 }

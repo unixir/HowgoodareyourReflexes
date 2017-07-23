@@ -167,10 +167,11 @@ public class MainGame extends AppCompatActivity {
             }
         }
         else if(score >= 3) score-=3;
-
-            /*else {Intent intent=new Intent(this,GameOverActivity.class);
+        else {
+            Intent intent=new Intent(this,Game_over.class);
             intent.putExtra("score",score);
-            startActivity(intent);}*/
+            startActivity(intent);
+        }
 
         RefreshGame();
     }
