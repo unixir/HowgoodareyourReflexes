@@ -89,6 +89,7 @@ public class MainGame extends AppCompatActivity {
                     Log.d(TAG,"out of while loop");
                     intent.putExtra("score",score);
                     startActivity(intent);
+                    finish();
                 }
                 catch (Exception e) {
                     e.printStackTrace();
@@ -171,6 +172,7 @@ public class MainGame extends AppCompatActivity {
             Intent intent=new Intent(this,Game_over.class);
             intent.putExtra("score",score);
             startActivity(intent);
+            finish();
         }
 
         RefreshGame();

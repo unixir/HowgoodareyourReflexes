@@ -28,5 +28,6 @@ public class Game_over extends AppCompatActivity {
     {
         Intent intent=new Intent(this,MainGame.class);
         startActivity(intent);
+        finish();
     }
 }
