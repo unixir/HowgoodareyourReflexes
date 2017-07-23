@@ -18,8 +18,6 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-import static java.lang.Thread.sleep;
-
 public class MainGame extends AppCompatActivity {
 
     TextView textViewColor,textViewScore,textViewTime;
@@ -33,7 +31,6 @@ public class MainGame extends AppCompatActivity {
     ProgressBar progressBar;
     static boolean done=false, isCorrect;
     Handler myHandler;
-    //CustomChronometer chronometer;
     Thread thread;
     Context context;
     static Intent intent;
@@ -69,10 +66,8 @@ public class MainGame extends AppCompatActivity {
             @Override
             public void run()
             {
-                try
-                {
-                    while(p <= 2000 && !done)
-                    {
+                try {
+                    while(p <= 2000 && !done) {
                         p +=20;
                         myHandler.post(new Runnable() {
                             @Override
@@ -107,8 +102,7 @@ public class MainGame extends AppCompatActivity {
             pColorID = RandomNumForColor();
             pColor = colors[pColorID];
             textViewColor.setText(pColor);
-            for (int i = 0; i < buttons.length; i++)
-            {
+            for (int i = 0; i < buttons.length; i++) {
                 if (i == 0)
                     buttons[i].setBackgroundColor(colorID[pColorID]);
                 else
