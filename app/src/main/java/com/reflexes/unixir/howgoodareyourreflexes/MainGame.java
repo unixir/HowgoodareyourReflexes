@@ -119,7 +119,7 @@ public class MainGame extends AppCompatActivity {
         //Log.d(TAG,"onClick");
         //Log.d(TAG, Integer.toString(buttons[0].getId()));
         tScore=p;
-        p=0;
+
         isCorrect = false;
 
         switch (view.getId())
@@ -145,6 +145,7 @@ public class MainGame extends AppCompatActivity {
         }
         if(isCorrect)
         {
+            p=0;
             if(tScore>1500)
             {
                 textViewScore.setTextColor(Color.GREEN);
